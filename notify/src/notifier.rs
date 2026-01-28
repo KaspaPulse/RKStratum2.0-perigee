@@ -541,7 +541,6 @@ pub mod test_helpers {
         scope::{BlockAddedScope, UtxosChangedScope, VirtualChainChangedScope},
         subscriber::test_helpers::SubscriptionMessage,
     };
-    use async_channel::Sender;
     use std::time::Duration;
 
     pub const SYNC_MAX_DELAY: Duration = Duration::from_secs(2);

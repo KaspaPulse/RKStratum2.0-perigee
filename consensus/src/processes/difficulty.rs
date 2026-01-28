@@ -309,7 +309,6 @@ impl Ord for DifficultyBlock {
 #[cfg(test)]
 mod tests {
     use kaspa_consensus_core::{BlockLevel, BlueWorkType, MAX_WORK_LEVEL};
-    use kaspa_math::{Uint256, Uint320};
     use kaspa_pow::calc_level_from_pow;
 
     use crate::processes::difficulty::{calc_work, level_work};

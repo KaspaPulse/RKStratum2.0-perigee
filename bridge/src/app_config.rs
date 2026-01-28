@@ -100,7 +100,6 @@ fn deserialize_optional_duration_ms<'de, D>(deserializer: D) -> Result<Option<Du
 where
     D: Deserializer<'de>,
 {
-    use serde::de::Error;
     let value: Option<serde_yaml::Value> = Option::deserialize(deserializer)?;
 
     if let Some(v) = value {

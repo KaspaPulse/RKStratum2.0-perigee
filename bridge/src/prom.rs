@@ -334,7 +334,6 @@ async fn handle_http_request(
     request: &str,
     mode: &HttpMode,
 ) -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-    use tokio::io::AsyncWriteExt;
 
     let path = request.lines().next().and_then(|line| line.split_whitespace().nth(1)).unwrap_or("/");
 
@@ -1331,7 +1330,6 @@ async fn get_config_json() -> String {
 
 /// Update config from JSON
 async fn update_config_from_json(json_body: &str) -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-    use std::fs;
     use std::time::Duration;
 
     let updates: serde_json::Value = serde_json::from_str(json_body)?;
@@ -1418,8 +1416,6 @@ async fn update_config_from_json(json_body: &str) -> Result<(), Box<dyn std::err
 
 /// Start Prometheus metrics server
 pub async fn start_prom_server(port: &str, instance_id: &str) -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-    use std::net::SocketAddr;
-    use tokio::net::TcpListener;
 
     init_metrics();
 

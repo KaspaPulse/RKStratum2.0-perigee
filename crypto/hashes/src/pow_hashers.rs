@@ -79,7 +79,6 @@ mod keccak256 {
 #[cfg(test)]
 mod tests {
     use super::{KHeavyHash, PowHash};
-    use crate::Hash;
     use sha3::digest::{ExtendableOutput, Update, XofReader};
     use sha3::{CShake256, CShake256Core};
 

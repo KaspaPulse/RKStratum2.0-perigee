@@ -158,8 +158,6 @@ pub mod kaspad_request_convert {
 }
 
 pub mod kaspad_response_convert {
-    use crate::protowire::*;
-    use kaspa_rpc_core::{RpcError, RpcResult};
 
     impl_into_kaspad_response!(Shutdown);
     impl_into_kaspad_response!(SubmitBlock);

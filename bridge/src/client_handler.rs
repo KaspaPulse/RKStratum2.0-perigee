@@ -601,7 +601,6 @@ impl ClientHandler {
                     state.set_use_big_job(use_big_job);
 
                     // Send initial difficulty
-                    use crate::hasher::KaspaDiff;
                     let mut stratum_diff = KaspaDiff::new();
                     // Use miner-specific calculation (IceRiver uses different formula)
                     let remote_app = client_clone.remote_app.lock().clone();

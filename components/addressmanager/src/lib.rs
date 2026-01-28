@@ -561,7 +561,6 @@ mod address_store_with_cache {
         use kaspa_core::task::tick::TickService;
         use kaspa_database::create_temp_db;
         use kaspa_database::prelude::ConnBuilder;
-        use kaspa_utils::networking::IpAddress;
         use rv::{dist::Uniform, misc::ks_test as one_way_ks_test, traits::Cdf};
         use std::net::{IpAddr, Ipv6Addr};
 

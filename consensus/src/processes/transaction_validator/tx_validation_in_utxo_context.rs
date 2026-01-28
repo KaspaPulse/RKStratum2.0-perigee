@@ -220,7 +220,6 @@ mod tests {
     use kaspa_consensus_core::subnets::SubnetworkId;
     use kaspa_consensus_core::tx::{MutableTransaction, PopulatedTransaction, ScriptVec, TransactionId, UtxoEntry};
     use kaspa_consensus_core::tx::{ScriptPublicKey, Transaction, TransactionInput, TransactionOutpoint, TransactionOutput};
-    use kaspa_txscript_errors::TxScriptError;
     use secp256k1::Secp256k1;
     use smallvec::SmallVec;
     use std::iter::once;

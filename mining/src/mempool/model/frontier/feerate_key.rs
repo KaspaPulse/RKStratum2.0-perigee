@@ -96,7 +96,6 @@ pub(crate) mod tests {
         tx::{Transaction, TransactionInput, TransactionOutpoint},
     };
     use kaspa_hashes::{HasherBase, TransactionID};
-    use std::sync::Arc;
 
     fn generate_unique_tx(i: u64) -> Arc<Transaction> {
         let mut hasher = TransactionID::new();

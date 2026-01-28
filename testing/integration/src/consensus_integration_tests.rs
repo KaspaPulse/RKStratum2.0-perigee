@@ -1542,7 +1542,6 @@ async fn payload_test() {
 
 #[tokio::test]
 async fn payload_for_native_tx_test() {
-    use kaspa_consensus_core::subnets::SUBNETWORK_ID_NATIVE;
 
     init_allocator_with_default_settings();
 
@@ -1738,10 +1737,7 @@ async fn sighash_type_commitment_test() {
     use kaspa_consensus_core::hashing::sighash_type::{
         SIG_HASH_ALL, SIG_HASH_ANY_ONE_CAN_PAY, SIG_HASH_NONE, SIG_HASH_SINGLE, SigHashType,
     };
-    use kaspa_consensus_core::subnets::SUBNETWORK_ID_NATIVE;
     use kaspa_txscript::opcodes::codes::*;
-    use kaspa_txscript::pay_to_script_hash_script;
-    use kaspa_txscript::script_builder::ScriptBuilder;
     use secp256k1::Keypair;
 
     init_allocator_with_default_settings();

@@ -1280,10 +1280,8 @@ mod bitcoind_tests {
     use std::io::BufReader;
     use std::path::Path;
 
-    use super::*;
     use crate::script_builder::ScriptBuilderError;
     use kaspa_consensus_core::constants::MAX_TX_IN_SEQUENCE_NUM;
-    use kaspa_consensus_core::hashing::sighash::SigHashReusedValuesUnsync;
     use kaspa_consensus_core::tx::{
         PopulatedTransaction, ScriptPublicKey, Transaction, TransactionId, TransactionOutpoint, TransactionOutput,
     };

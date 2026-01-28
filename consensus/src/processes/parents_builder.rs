@@ -211,14 +211,12 @@ mod tests {
     };
 
     use super::ParentsManager;
-    use itertools::Itertools;
     use kaspa_consensus_core::{
         BlockHashSet, HashMapCustomHasher,
         blockhash::{BlockHashes, ORIGIN},
         header::Header,
     };
     use kaspa_database::prelude::{ReadLock, StoreError, StoreResult};
-    use kaspa_hashes::Hash;
     use parking_lot::RwLock;
 
     struct HeaderStoreMock {

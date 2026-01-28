@@ -931,8 +931,6 @@ macro_rules! construct_uint {
                     deserializer.deserialize_str(InPlaceVisitor(place))
 
                 } else {
-                    use core::fmt;
-                    use $crate::uint::serde::de::{Error, SeqAccess, Visitor};
                     struct InPlaceVisitor<'a>(&'a mut $name);
 
                     impl<'de, 'a> Visitor<'de> for InPlaceVisitor<'a> {
@@ -973,7 +971,6 @@ macro_rules! construct_uint {
             type Error = $crate::Error;
             #[inline]
             fn try_from(value: $name) -> Result<js_sys::BigInt, Self::Error> {
-                use $crate::wasm::*;
                 BigInt::try_from(&value)
             }
         }
@@ -981,7 +978,6 @@ macro_rules! construct_uint {
         impl TryFrom<wasm_bindgen::JsValue> for $name {
             type Error = $crate::Error;
             fn try_from(js_value: wasm_bindgen::JsValue) -> Result<Self, Self::Error> {
-                use $crate::wasm::*;
 
                 if js_value.is_string() || js_value.is_array() {
                     let bytes = js_value.try_as_vec_u8()?;

@@ -205,7 +205,6 @@ impl StratumListener {
                         debug!("[CONNECTION] Local address: {:?}", stream.local_addr());
                         debug!("[CONNECTION] Connection accepted successfully");
 
-                        use crate::mining_state::MiningState;
                         let state = Arc::new(MiningState::new());
 
                         let remote_addr_for_log = remote_addr.clone();

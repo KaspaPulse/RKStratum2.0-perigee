@@ -22,7 +22,6 @@ mod tests {
         subnets::{SUBNETWORK_ID_COINBASE, SUBNETWORK_ID_NATIVE},
         tx::{ScriptPublicKey, Transaction, TransactionId, TransactionInput, TransactionOutpoint, TransactionOutput, scriptvec},
     };
-    use kaspa_hashes::Hash;
 
     #[test]
     fn merkle_root_test() {

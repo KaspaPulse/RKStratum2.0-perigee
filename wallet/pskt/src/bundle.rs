@@ -273,7 +273,6 @@ pub fn unlock_utxo_outputs_as_batch_transaction_pskb(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::prelude::*;
     use crate::role::Creator;
     use crate::role::*;
     use kaspa_consensus_core::tx::{TransactionId, TransactionOutpoint, UtxoEntry};

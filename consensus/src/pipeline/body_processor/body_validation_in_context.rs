@@ -99,7 +99,6 @@ mod tests {
         tx::{Transaction, TransactionInput, TransactionOutpoint},
     };
     use kaspa_core::assert_match;
-    use kaspa_hashes::Hash;
 
     #[tokio::test]
     async fn validate_body_in_context_test() {

@@ -151,7 +151,6 @@ pub mod test_helpers {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
 
     #[test]
     fn test_extract_address_and_encode_script() {

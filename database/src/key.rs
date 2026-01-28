@@ -114,7 +114,6 @@ impl Debug for DbKey {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use DatabaseStorePrefixes::*;
     use kaspa_hashes::{HASH_SIZE, Hash};
 
     #[test]

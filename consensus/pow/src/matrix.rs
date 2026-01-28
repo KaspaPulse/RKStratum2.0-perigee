@@ -140,7 +140,6 @@ where
 #[cfg(test)]
 mod tests {
     use super::Matrix;
-    use crate::xoshiro::XoShiRo256PlusPlus;
     use kaspa_hashes::Hash;
 
     #[test]

@@ -153,7 +153,6 @@ pub fn diff_to_target(diff: f64) -> BigUint {
 /// Formula: target = maxTarget / diff
 /// This uses floating point division then converts to integer
 fn diff_to_target_standard(diff: f64) -> BigUint {
-    use num_traits::Num;
 
     // Handle edge cases
     if diff <= 0.0 {
@@ -433,7 +432,6 @@ mod tests {
     #[test]
     #[ignore] // Diagnostic test - values may vary based on implementation
     fn test_diff_to_target() {
-        use num_traits::Num;
 
         // Test difficulty 1.0 (should be 0xffff * 2^208)
         let target = diff_to_target(1.0);
@@ -498,7 +496,6 @@ mod tests {
         println!("Devnet target: {:x} ({} bytes)", devnet_target, devnet_target.to_bytes_be().len());
 
         // Test comparison with actual pow_value that should pass
-        use num_traits::Num;
         let pow_value_hex = "1411c29a4bb46627f3f225eff3a6334d61b8700568364aa7a36e9f16b49e12a0";
         let pow_value = <BigUint as Num>::from_str_radix(pow_value_hex, 16).unwrap();
 
@@ -545,7 +542,6 @@ mod tests {
 
     #[test]
     fn test_share_validation_comparison() {
-        use num_traits::Num;
 
         // Test with actual pow_values from logs
         // pow_value from log line 733: 38401bd9f41763ea12bfb1ab9cf252709476437590272464fc287d69c0890e13

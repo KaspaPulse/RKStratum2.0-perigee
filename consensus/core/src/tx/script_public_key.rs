@@ -406,7 +406,6 @@ impl TryCastFromJs for ScriptPublicKey {
 mod tests {
     use super::*;
     #[cfg(target_arch = "wasm32")]
-    use js_sys::Object;
     #[cfg(target_arch = "wasm32")]
     use wasm_bindgen::__rt::IntoJsResult;
 

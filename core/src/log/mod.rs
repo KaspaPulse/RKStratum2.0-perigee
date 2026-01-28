@@ -61,8 +61,6 @@ pub fn init_logger(log_dir: Option<&str>, filters: &str) {
 /// Should be used for tests.
 #[cfg(not(target_arch = "wasm32"))]
 pub fn try_init_logger(filters: &str) {
-    use crate::log::appender::AppenderSpec;
-    use log4rs::{Config, config::Root};
 
     const CONSOLE_APPENDER: &str = "stdout";
 

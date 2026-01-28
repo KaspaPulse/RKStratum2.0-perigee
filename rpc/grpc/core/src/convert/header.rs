@@ -113,7 +113,6 @@ try_from!(item: &protowire::RpcBlockLevelParents, Vec<RpcHash>, {
 
 #[cfg(test)]
 mod tests {
-    use crate::protowire;
     use itertools::Itertools;
     use kaspa_consensus_core::{block::Block, header::Header};
     use kaspa_rpc_core::{RpcBlock, RpcHash, RpcHeader};
